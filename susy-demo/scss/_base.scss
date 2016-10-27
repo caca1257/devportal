@@ -34,7 +34,4 @@ aside {
 	main{
 		@include span(12);
 	}//main
-	aside{
-		@include span(12 last);
-	}//aside
 }//small breakpoint
