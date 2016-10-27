@@ -1,0 +1,122 @@
+header,h1, h2{
+	color: $headcolor;
+}
+header{
+	text-align: center;
+}
+nav{
+	@include list();
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.39);
+	left: 0;
+	right: 0;
+	display: block;
+	width: 100%;
+	font-family: "Lato", sans-serif; 
+	img {
+		position: absolute;
+		width: 100px;
+		left: 40px;
+		top: 0; 
+	}
+	ul{
+	margin: 0;
+	padding: 10px 0 10px 0;
+	text-align: left;
+	margin: 0 20px 0 20px; 
+		li {
+		  display: inline-block;
+		  position: relative;
+		  margin: 0 30px 0 30px;
+		  vertical-align: middle;
+		  line-height: 35px; 
+ 		
+	 		&:hover{
+	    		border-bottom: 3px solid #92A8C2; 
+	 		}
+	 		a {
+    			color: black; 
+    		}
+		}
+
+    }
+}
+
+.dropdown {
+	text-align: center;
+	z-index: 3;
+	position: relative;
+
+	.dropbtn {
+		border: none;
+		cursor: pointer;
+		color: white;
+	}
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		margin-top: 3px;
+		background-color: rgba(0, 0, 0, 0.39);
+		min-width: 175px;
+		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+		a {
+			color: white;
+			padding: 10px 6px;
+			text-decoration: none;
+			display: block; 
+
+			&:hover {
+				border-left: 4px solid #92A8C2;
+				background-color: none; 
+			}
+		}
+		
+	}
+	&:hover .dropdown-content {
+			display: block; 
+	} 
+
+}
+
+
+
+
+
+
+
+
+//start of grids
+body{
+	background: $desktop-bg;
+}
+
+#main {
+	@include span(8);
+}
+
+@include susy-breakpoint($large) {
+	body {
+		background: $large-bg;
+	}//body
+}//large breakpoint
+@include susy-breakpoint($medium) {
+	body {
+		background: $medium-bg;
+	}//body
+		#main{
+			@include span(6);
+		}//main
+	
+}//medium breakpoint
+@include susy-breakpoint($small) {
+	body {
+		background: $small-bg;
+	}//body
+	#main{
+		@include span(12);
+	}//main
+	header,h1,h2{
+		color: $desktop-bg;
+	}
+}//small breakpoint
