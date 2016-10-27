@@ -188,7 +188,7 @@ nav ul li a {
 }
 
 .projects {
-  margin-top: 250px;
+  margin-top: 150px;
   margin-left: 150px;
   margin-bottom: 150px;
 }
@@ -268,9 +268,14 @@ body {
   }
 
   #main {
-    width: 49.15254%;
+    width: 100%;
     float: left;
-    margin-right: 1.69492%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .projects {
+    margin-left: 70px;
   }
 }
 @media (min-width: 1px) and (max-width: 480px) {
@@ -287,6 +292,13 @@ body {
 
   header, h1, h2 {
     color: #2f252a;
+  }
+
+  .projects {
+    margin-left: 40px;
+  }
+  .projects .view {
+    border: 6px solid #2f252a;
   }
 }
 /*

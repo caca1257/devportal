@@ -79,9 +79,13 @@ body{
 	body {
 		background: $medium-bg;
 	}//body
-		#main{
-			@include span(6);
-		}//main
+	#main{
+		@include span(12);
+	}//main
+	.projects{
+		margin-left:70px;
+
+	}	
 	
 }//medium breakpoint
 @include susy-breakpoint($small) {
@@ -93,5 +97,13 @@ body{
 	}//main
 	header,h1,h2{
 		color: $desktop-bg;
+	}
+	.projects{
+		margin-left:40px;
+
+		.view{
+			border: 6px solid $desktop-bg;
+		}
+
 	}
 }//small breakpoint
